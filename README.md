@@ -58,26 +58,28 @@ This walkthrough will detail the analytical tasks performed on the dataset, whic
 ```Excel
 Calculated column =((actual price-discounted price)/actual price)*100 
 ``` 
-Then create a pivot table. **Rows**: Category, **Values**: Discount (set to summarize by Average)
-#### ***2a. Top 3 regions in terms of sales***
+Create a pivot table. **Rows**: Category, **Values**: Discount (set to summarize by Average)
+#### ***2a. Number of products under each category***
+Create a pivot table. **Rows**: Category, **Values**: Product name (set to count (distinct))
 
-#### ***2b. Bottom 3 regions in terms of sales***
+#### ***3. Total number of reviews per category***
+Create a pivot table. **Rows**: category, **values**: Rating Count (sum)
 
-#### ***3. Total sales of appliances in Ontario***
+#### ***4. Total sales of appliances in Ontario***
 
-#### ***4. Bottom 10 customers***
+#### ***5. Bottom 10 customers***
 
-#### ***5. Most expensive shipping method***
+#### ***6. Most expensive shipping method***
 
-#### ***6. The most valuable customers and their purchase patterns***
+#### ***7. The most valuable customers and their purchase patterns***
 
-#### ***7. The small business customer with the highest sales***
+#### ***8. The small business customer with the highest sales***
 
-#### ***8.  Corporate Customer who placed the most number of orders between 2009 and 2012***
+#### ***9.  Corporate Customer who placed the most number of orders between 2009 and 2012***
 
-#### ***9.   Most profitable consumer customer***
+#### ***10.   Most profitable consumer customer***
 
-#### ***10. Customers with returned items and their segments***
+#### ***11. Customers with returned items and their segments***
 
 #### ***11. Shipping costs based on the Order Priority***
 ```SQL
