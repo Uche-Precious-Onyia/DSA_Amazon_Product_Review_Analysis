@@ -106,45 +106,13 @@ Use COUNT
 There are 15 product categories and 191 products with fewer than 1,000 ratings
 
 #### ***13. Categories with products with the highest discounts***
+Create a pivot table: **Rows**: Category, **Values**: Discount percentage (max)
 
-#### ***14. Customers with returned items and their segments***
-
-#### ***11. Shipping costs based on the Order Priority***
-```SQL
-select  ship_mode, order_priority, sum (shipping_cost) as [Total shipping cost]
-from (select ship_mode, order_priority, shipping_cost from [Order ]) as [Most Profitable Consumer Customer] 
-where Ship_Mode = 'delivery truck' or Ship_Mode = 'Express air'
-group by ship_mode, Order_Priority
-order by [Total shipping cost] desc
+#### ***14. Top 5 products by ratings and number of reviews combined***
+```Excel
+Calculated column =[@[average_rating]] + ([@[discounted_price]/scaling factor e.g 1000)
 ```
-If the delivery truck is the most economical but the slowest shipping method and Express Air is the fastest but the most expensive one, did the company appropriately spend shipping costs based on the Order Priority? To determine when a company appropriately spends shipping costs based on order priority, we can categorize the shipping methods according to the urgency of the orders. 
-
-***Shipping Methods***
-- Delivery Truck
-  - Cost: Most economical
-  - Speed: Slowest
-- Express Air
-  - Cost: Most expensive
-  - Speed: Fastest
-
-***Order Priorities***
-- Critical: Requires immediate delivery.
-- High: Needs prompt delivery but not as urgent as critical.
-- Medium: Standard delivery timeframe is acceptable.
-- Low: Can wait for delivery without any rush.
-
-***Appropriate Shipping Costs Based on Order Priority***
-  
-| Order Priority | Recommended Shipping Method |  Justification |
-| ------------- | ------------- | ------------- |
-| Critical	Express  | Air | Immediate delivery is essential to meet urgent needs |
-| High  | Express Air or Delivery Truck	Depending on the specific urgency and availability of budget  | Express Air if budget allows; otherwise, Delivery Truck if acceptable |
-| Medium  | Delivery Truck  | Cost-effective option is suitable for standard delivery times |
-| Low  | Delivery Truck  | Most economical choice is appropriate for non-urgent deliveries |
-
-A look at the results generated below shows that the company is incurring higher shipping costs for delivery trucks over Express Air across all order priorities. This indicates a misalignment with the principles of cost-effectiveness, order priority, and customer satisfaction. Therefore, we cannot say that the comapany appropriately spent shipping costs based on the Order Priority.
-
-![image](https://github.com/user-attachments/assets/a83cc32a-c4be-485f-84e9-8d4f81e4f67e)
+sort result in descending order
 ### Summary of Results and Findings
 - The product category with the highest sales is Technology with 5984248.409
 - The top 3 regions in terms of sales are the **West** with **3597549.329**, **Ontario** with **3063212.527** and **Prarie** with **2837304.650** and the bottom 3 regions in terms of sales are **Nunavut** with **116376.486**, **Northwest Territories** with **800847.341**, and **Yukon** with **975867.383**
