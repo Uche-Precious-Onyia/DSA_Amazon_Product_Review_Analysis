@@ -54,18 +54,12 @@ This involves exploring the dataset provided to provide insights.
 - Using your cleaned dataset and pivot outputs, build an Excel dashboard. 
 ### Data Analysis and Visualization
 This walkthrough will detail the analytical tasks performed on the dataset, which will inform the insights presented to the management at Amazon.
-#### ***1. Product category with the highest sales***
-```SQL
-SELECT TOP 1 product_category, SUM(sales) AS [Total Sales]
-FROM [order]
-GROUP BY product_category
-ORDER BY [Total Sales] DESC
+#### ***1. Average discount percentage by product category***
+```Excel
+=((K2-I2)/K2)*100 
 ```
-Our analysis reveals that the product category with the highest sales is **Technology** with **5984248.409**
-
-![image](https://github.com/user-attachments/assets/2814bf32-460c-4ebb-b4f1-c93f2619b877)
-
-![image](https://github.com/user-attachments/assets/9354675b-849b-4ee4-a51a-0e1e5decdc6c)
+Where k2 is Actual price in cell k2 and I2 is the discounted price in cell I2. 
+Then create a pivot table. **Rows**: Category, **Values**: Discount (set to summarize by Average)
 #### ***2a. Top 3 regions in terms of sales***
 ```SQL
 SELECT TOP 3 Region, SUM(sales) AS [Total Sales]
