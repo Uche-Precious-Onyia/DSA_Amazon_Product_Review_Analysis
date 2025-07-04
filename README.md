@@ -31,21 +31,25 @@ Each row represents a unique product, with aggregated reviewer data stored as co
 - Categories were split into multiple levels using the text to columns control in Excel.
 - Next, the dataset was checked for errors using the filter command, and the errors corrected. For instance, in the actual price column, an input reads 1,39,900. We will change this to 139,900. Eliminating errors is important as they may affect the result of our analysis.
 ### Exploratory Data analysis (EDA)
-This involves exploring the dataset provided to provide insights. The following are the areas where KMS requires insights to be provided:
-- Which product category had the highest sales?
-- What are the Top 3 and Bottom 3 regions in terms of sales?
-- What were the total sales of appliances in Ontario?
-- Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers
-- KMS incurred the most shipping cost using which shipping method?
-- Who are the most valuable customers, and what products or services do they typically purchase?
-- Which small business customer had the highest sales?
-- Which Corporate Customer placed the most number of orders in 2009 – 2012?
-- Which consumer customer was the most proﬁtable one?
-- Which customer returned items, and what segment do they belong to?
-- If the delivery truck is the most economical but the slowest shipping method and Express Air is the fastest but the most expensive one, do you think the company appropriately spent shipping costs based on the Order Priority? Explain your answer
-### Findings From the Order Dataset
-- There are repeated product ids for different products shipped to the same customers on the same day. This means that products to be delivered to any customer on the same day are issued the same product id.
-- Some customers are returning customers (i.e., they names appear on our dataset more than once). We want to take note of this when trying to compute things like most valuable customers, top 3 or bottom 3 customers, etc.
+This involves exploring the dataset provided to provide insights. 
+***The following are the areas where KMS requires insights to be provided:***
+- What is the average discount percentage by product category?
+- How many products are listed under each category?
+- What is the total number of reviews per category?
+- Which products have the highest average ratings?
+- What is the average actual price vs the discounted price by category?
+- Which products have the highest number of reviews?
+- How many products have a discount of 50% or more?
+- What is the distribution of product ratings (e.g., how many products are rated 3.0, 4.0, etc.)?
+- What is the total potential revenue (actual_price × rating_count) by category?
+- What is the number of unique products per price range bucket (e.g., <₹200, ₹200–₹500, >₹500)?
+- How does the rating relate to the level of discount?
+- How many products have fewer than 1,000 reviews?
+- Which categories have products with the highest discounts?
+- Identify the top 5 products in terms of rating and number of reviews combined.
+***Required***
+- Use pivot tables and calculated columns
+- Using your cleaned dataset and pivot outputs, build an Excel dashboard. 
 ### Data Analysis and Visualization
 This is where I have included the queries I ran and the results arrived at that will inform the insights that will be presented to the management at Kultra Mega stores.
 #### ***1. Product category with the highest sales***
