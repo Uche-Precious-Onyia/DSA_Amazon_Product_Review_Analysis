@@ -56,7 +56,7 @@ This involves exploring the dataset provided to provide insights.
 This walkthrough will detail the analytical tasks performed on the dataset, which will inform the insights presented to the management at Amazon.
 #### ***1. Average discount percentage by product category***
 ```Excel
-Calculated column =((actual price-discounted price)/actual price)*100 
+Calculated column =(([@[actual_price]]-[@[discounted_price]])/[@[actual_price]])*100 
 ``` 
 Create a pivot table. **Rows**: Category, **Values**: Discount (set to summarize by Average)
 #### ***2. Number of products under each category***
@@ -77,7 +77,7 @@ sort Rating Count column in decending order
 
 #### ***7. Products with a discount of 50% or more***
 ```Excel
-Calculated column =IF(Discount percentage>=50%,TRUE,FALSE)
+Calculated column =IF([@[discount_percentage]]>=50%,TRUE,FALSE)
 ```
 And then run the countif like this: 
 ```Excel
@@ -90,13 +90,20 @@ Create a pivot table. **Rows**: Ratings, **Values**: product name (count)
 
 #### ***9. Total potential revenue (actual_price × rating_count) by category***
 ```Excel
-=Calculated column =Actual price*Rating count
+Calculated column =[@[actual_price]]*[@[rating_count]]
 ```
 Create a pivot table. **Rows**: Category, **Values**: Total potential revenue (sum)
 
-#### ***10.   Most profitable consumer customer***
+#### ***10. Number of unique products per price bucket***
+Calculated column =IF([@[discounted_price]]< 200,"<₹200",IF([@[discounted_price]]<=500,"₹200-₹500",">₹500"))
 
 #### ***11. Customers with returned items and their segments***
+
+#### ***12. Customers with returned items and their segments***
+
+#### ***13. Customers with returned items and their segments***
+
+#### ***14. Customers with returned items and their segments***
 
 #### ***11. Shipping costs based on the Order Priority***
 ```SQL
