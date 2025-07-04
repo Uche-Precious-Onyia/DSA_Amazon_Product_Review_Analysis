@@ -56,22 +56,33 @@ This involves exploring the dataset provided to provide insights.
 This walkthrough will detail the analytical tasks performed on the dataset, which will inform the insights presented to the management at Amazon.
 #### ***1. Average discount percentage by product category***
 ```Excel
-Calculated column =((actual price-discounted price)/actual price)*100 
+**Calculated column** =((actual price-discounted price)/actual price)*100 
 ``` 
 Create a pivot table. **Rows**: Category, **Values**: Discount (set to summarize by Average)
-#### ***2a. Number of products under each category***
+#### ***2. Number of products under each category***
 Create a pivot table. **Rows**: Category, **Values**: Product name (set to count (distinct))
 
 #### ***3. Total number of reviews per category***
 Create a pivot table. **Rows**: category, **values**: Rating Count (sum)
 
-#### ***4. Total sales of appliances in Ontario***
+#### ***4. Products with the highest average ratings***
 
-#### ***5. Bottom 10 customers***
+#### ***5.  The average actual price vs the discounted price by category***
+Create a pivot table. **Rows**: Category, **Values**: Actual price (set to summarize by Average), Discounted price (set to summarize by Average)
 
-#### ***6. Most expensive shipping method***
-
-#### ***7. The most valuable customers and their purchase patterns***
+#### ***6. Products with the highest number of reviews***
+```Excel
+sort Rating Count column in decending order
+``` 
+#### ***7. Products with a discount of 50% or more***
+```Excel
+**Calculated column** =IF(Discount percentage>=50%,TRUE,FALSE)
+```
+And then run the countif like this: 
+```Excel
+=COUNTIF(calculated column, TRUE) 
+```
+Our answer is 662. So there are 662 products with a discount of 50% or more
 
 #### ***8. The small business customer with the highest sales***
 
