@@ -113,6 +113,7 @@ Create a pivot table: **Rows**: Category, **Values**: Discount percentage (max)
 Calculated column =[@[average_rating]] + ([@[discounted_price]/scaling factor e.g 1000)
 ```
 sort result in descending order
+
 ### Summary of Results and Findings
 - The product category with the highest sales is Technology with 5984248.409
 - The top 3 regions in terms of sales are the **West** with **3597549.329**, **Ontario** with **3063212.527** and **Prarie** with **2837304.650** and the bottom 3 regions in terms of sales are **Nunavut** with **116376.486**, **Northwest Territories** with **800847.341**, and **Yukon** with **975867.383**
