@@ -56,7 +56,7 @@ This involves exploring the dataset provided to provide insights.
 This walkthrough will detail the analytical tasks performed on the dataset, which will inform the insights presented to the management at Amazon.
 #### ***1. Average discount percentage by product category***
 ```Excel
-=((actual price-discounted price)/actual price)*100 
+Calculated column =((actual price-discounted price)/actual price)*100 
 ``` 
 Then create a pivot table. **Rows**: Category, **Values**: Discount (set to summarize by Average)
 #### ***2a. Top 3 regions in terms of sales***
