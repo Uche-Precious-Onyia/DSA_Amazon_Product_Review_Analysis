@@ -59,13 +59,12 @@ This walkthrough will detail the analytical tasks performed on the dataset, whic
 Calculated column =(([@[actual_price]]-[@[discounted_price]])/[@[actual_price]])*100 
 ``` 
 Create a pivot table. **Rows**: Category, **Values**: Discount (set to summarize by Average)
+
 #### ***2. Number of products under each category***
 Create a pivot table. **Rows**: Category, **Values**: Product name (set to count (distinct))
 
 #### ***3. Total number of reviews per category***
 Create a pivot table. **Rows**: category, **values**: Rating Count (sum)
-
-#### ***4. Products with the highest average ratings***
 
 #### ***5.  The average actual price vs the discounted price by category***
 Create a pivot table. **Rows**: Category, **Values**: Actual price (set to summarize by Average), Discounted price (set to summarize by Average)
@@ -95,12 +94,16 @@ Calculated column =[@[actual_price]]*[@[rating_count]]
 Create a pivot table. **Rows**: Category, **Values**: Total potential revenue (sum)
 
 #### ***10. Number of unique products per price bucket***
+```Excel
 Calculated column =IF([@[discounted_price]]< 200,"<₹200",IF([@[discounted_price]]<=500,"₹200-₹500",">₹500"))
+```
+Create a pivot table. **Price range bucket**: Category, **Values**: product name (count)
 
-#### ***11. Customers with returned items and their segments***
-
-#### ***12. Customers with returned items and their segments***
-
+#### ***12. Products with fewer than 1000 reviews***
+Create a pivot table: **Rows**: Category, **Values**: Rating count
+Filter rating count < 1000
+Use COUNT
+There are ??? number of products with fewer than 1,000 ratings
 #### ***13. Customers with returned items and their segments***
 
 #### ***14. Customers with returned items and their segments***
