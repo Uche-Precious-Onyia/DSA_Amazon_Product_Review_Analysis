@@ -53,7 +53,7 @@ This involves exploring the dataset provided to provide insights.
 - Use pivot tables and calculated columns
 - Using your cleaned dataset and pivot outputs, build an Excel dashboard. 
 ### Data Analysis and Visualization
-This is where I have included the queries I ran and the results arrived at that will inform the insights that will be presented to the management at Kultra Mega stores.
+This walkthrough will detail the analytical tasks performed on the dataset, which will inform the insights presented to the management at Amazon.
 #### ***1. Product category with the highest sales***
 ```SQL
 SELECT TOP 1 product_category, SUM(sales) AS [Total Sales]
