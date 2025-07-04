@@ -103,8 +103,9 @@ Create a pivot table. **Price range bucket**: Category, **Values**: product name
 Create a pivot table: **Rows**: Category, **Values**: Rating count
 Filter rating count < 1000
 Use COUNT
-There are ??? number of products with fewer than 1,000 ratings
-#### ***13. Customers with returned items and their segments***
+There are 15 product categories and 191 products with fewer than 1,000 ratings
+
+#### ***13. Categories with products with the highest discounts***
 
 #### ***14. Customers with returned items and their segments***
 
