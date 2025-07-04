@@ -26,13 +26,10 @@ Each row represents a unique product, with aggregated reviewer data stored as co
 - Microsoft PowerPoint(for presentation of findings)
 
 ### Data Cleaning and Preparation
-- Database creation: A new database called KMS_db was first created on my RDBMS, MS SQL Server. 
-- Data loading and inspection: The CSV files for order_status and KMS sql case study were imported into the RDBMS. The file KMS sql case study was renamed **Order** and will from hereon out be referred to as the Order table.  
-- Updating the data type: After importing the files, updates had to be made for specific columns with decimal values on the KMS sql case study dataset. These columns include: **sales**, **discount**, **profit**, **unit _price**, **shipping_cost**, and **product_base_margin**. The purpose of this was to change them to values with 10 whole numbers and three decimal places. Here is an example of the query run for **Sales**.
-```SQL
-ALTER TABLE [order] 
-ALTER COLUMN sales DECIMAL (10,3)
-```
+- First, columns not useful for the analysis were eliminated. Such columns include image Link, Product Link, about product, review content 
+- Then we removed duplicate produt ids because no two products should have the same id
+- Categories were split into multiple levels using the text to columns control in Excel.
+- Next, the dataset was checked for errors using the filter command, and the errors corrected. For instance, in the actual price column, an input reads 1,39,900. We will change this to 139,900. Eliminating errors is important as they may affect the result of our analysis.
 ### Exploratory Data analysis (EDA)
 This involves exploring the dataset provided to provide insights. The following are the areas where KMS requires insights to be provided:
 - Which product category had the highest sales?
