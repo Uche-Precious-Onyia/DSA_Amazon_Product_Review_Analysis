@@ -32,6 +32,7 @@ Each row represents a unique product, with aggregated reviewer data stored as co
 - Next, the dataset was checked for errors using the filter command, and the errors corrected. For instance, in the actual price column, an input reads 1,39,900. We will change this to 139,900. Eliminating errors is important as they may affect the result of our analysis.
 ### Exploratory Data analysis (EDA)
 This involves exploring the dataset provided to provide insights. 
+
 ***The following are the areas where KMS requires insights to be provided:***
 - What is the average discount percentage by product category?
 - How many products are listed under each category?
@@ -47,6 +48,7 @@ This involves exploring the dataset provided to provide insights.
 - How many products have fewer than 1,000 reviews?
 - Which categories have products with the highest discounts?
 - Identify the top 5 products in terms of rating and number of reviews combined.
+  
 ***Required***
 - Use pivot tables and calculated columns
 - Using your cleaned dataset and pivot outputs, build an Excel dashboard. 
