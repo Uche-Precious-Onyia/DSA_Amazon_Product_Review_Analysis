@@ -56,7 +56,7 @@ This involves exploring the dataset provided to provide insights.
 This walkthrough will detail the analytical tasks performed on the dataset, which will inform the insights presented to the management at Amazon.
 #### ***1. Average discount percentage by product category***
 ```Excel
-**Calculated column** =((actual price-discounted price)/actual price)*100 
+Calculated column =((actual price-discounted price)/actual price)*100 
 ``` 
 Create a pivot table. **Rows**: Category, **Values**: Discount (set to summarize by Average)
 #### ***2. Number of products under each category***
@@ -73,20 +73,26 @@ Create a pivot table. **Rows**: Category, **Values**: Actual price (set to summa
 #### ***6. Products with the highest number of reviews***
 ```Excel
 sort Rating Count column in decending order
-``` 
+```
+
 #### ***7. Products with a discount of 50% or more***
 ```Excel
-**Calculated column** =IF(Discount percentage>=50%,TRUE,FALSE)
+Calculated column =IF(Discount percentage>=50%,TRUE,FALSE)
 ```
 And then run the countif like this: 
 ```Excel
 =COUNTIF(calculated column, TRUE) 
 ```
-Our answer is 662. So there are 662 products with a discount of 50% or more
+Our answer is **662**. So there are **662** products with a discount of 50% or more
 
-#### ***8. The small business customer with the highest sales***
+#### ***8. The distribution of product ratings (e.g., how many products are rated 3.0, 4.0, etc.)?***
+Create a pivot table. **Rows**: Ratings, **Values**: product name (count)
 
-#### ***9.  Corporate Customer who placed the most number of orders between 2009 and 2012***
+#### ***9. Total potential revenue (actual_price × rating_count) by category***
+```Excel
+=Calculated column =Actual price*Rating count
+```
+Create a pivot table. **Rows**: Category, **Values**: Total potential revenue (sum)
 
 #### ***10.   Most profitable consumer customer***
 
