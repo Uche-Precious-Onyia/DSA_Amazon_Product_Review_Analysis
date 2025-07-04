@@ -10,7 +10,7 @@ Amazon Product Review Analysis
 As a Junior Data Analyst at RetailTech Insights, a company that provides e-commerce analytics solutions to sellers on platforms like Amazon, my team and I have been 
 tasked with analysing product and customer review data to generate insights that can guide product improvement, marketing strategies, and customer engagement. 
 ### Data Source
-A dataset was provided- Amazon case study- for this project [download here](https://docs.google.com/spreadsheets/d/1vmfFDn1K4l88d2tnAKsPRJVy2LprGPEm/edit?usp=sharing&ouid=111890686017413181401&rtpof=true&sd=true)
+A dataset was provided- Amazon case study- for this project [download here]https://docs.google.com/spreadsheets/d/13k0hJFL3V0qJlbYCysdNWIgSPbUWm8Kx/edit?usp=sharing&ouid=111890686017413181401&rtpof=true&sd=true
 
 The dataset contains information scraped from Amazon product pages, including: 
 - Product details: name, category, price, discount, and ratings
