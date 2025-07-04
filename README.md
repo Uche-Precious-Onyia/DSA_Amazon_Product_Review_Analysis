@@ -10,7 +10,7 @@ Amazon Product Review Analysis
 As a Junior Data Analyst at RetailTech Insights, a company that provides e-commerce analytics solutions to sellers on platforms like Amazon, my team and I have been 
 tasked with analysing product and customer review data to generate insights that can guide product improvement, marketing strategies, and customer engagement. 
 ### Data Source
-A dataset was provided- Amazon case study- for this project [download here](https://drive.google.com/file/d/1Tq8ccM4LoX50BPxkpfXaaCrlXFx5P_6Y/view?usp=sharing)
+A dataset was provided- Amazon case study- for this project [download here](https://docs.google.com/spreadsheets/d/1vmfFDn1K4l88d2tnAKsPRJVy2LprGPEm/edit?usp=sharing&ouid=111890686017413181401&rtpof=true&sd=true)
 
 The dataset contains information scraped from Amazon product pages, including: 
 - Product details: name, category, price, discount, and ratings
@@ -22,7 +22,7 @@ Each row represents a unique product, with aggregated reviewer data stored as co
 ### Tools Used
 - Excel for data collection
 - Microsoft word (for documenting steps and findings)
-- SQL server (for querying and analysis)
+- Microsoft Excel (as the tool for our analysis)
 - Microsoft PowerPoint(for presentation of findings)
 
 ### Data Cleaning and Preparation
